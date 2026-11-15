@@ -22,7 +22,7 @@ function updateHotel(hotel) {
     option.checked = option === selected;
   });
   const name = selected?.closest(".stay-card").querySelector("h3").textContent;
-  selectedLabel.textContent = name ? `선택한 숙소: ${name}` : "선택한 숙소 없음";
+  selectedLabel.textContent = name ? `고른 숙소는 ${name}` : "아직 숙소 안 골랐어";
   copyButton.disabled = !selected;
   clearButton.hidden = !selected;
   shareInput.hidden = true;
@@ -74,10 +74,10 @@ copyButton.addEventListener("click", async () => {
 
   try {
     await navigator.clipboard.writeText(url.href);
-    message.textContent = "선택한 숙소 링크를 복사했습니다.";
+    message.textContent = "링크 복사했어!";
   } catch {
     shareInput.focus();
     shareInput.select();
-    message.textContent = "표시된 주소를 복사하세요.";
+    message.textContent = "위에 나온 주소 복사하면 돼.";
   }
 });
