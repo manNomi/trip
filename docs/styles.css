@@ -76,6 +76,11 @@ h2 { font-size: clamp(29px, 4vw, 45px); line-height: 1.18; letter-spacing: -.07e
 .route-line small { display: block; font-size: 10px; white-space: nowrap; }
 .ticket-foot { padding-top: 13px; border-top: 1px dashed var(--rule); color: var(--muted); font-size: 12px; }
 .ticket-foot strong { margin-left: 4px; color: var(--pine); }
+.stay-card p { margin: 0 0 10px; }
+.stay-rates { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 12px 0; padding: 0; list-style: none; }
+.stay-rates a { color: var(--pine); text-underline-offset: 4px; }
+.stay-rates small { color: var(--muted); }
+.itinerary-more { margin-top: 16px; }
 
 .fare { margin-top: 15px; background: #f0ebdc; border-radius: 5px; }
 .fare summary { display: flex; align-items: center; gap: 10px; min-height: 54px; padding: 11px 18px; font-size: 14px; font-weight: 700; cursor: pointer; list-style: none; }
