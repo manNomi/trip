@@ -26,8 +26,9 @@ button { font: inherit; color: inherit; }
 .skip:focus { transform: none; }
 
 .site-header { position: sticky; top: 0; z-index: 2; background: var(--paper); border-bottom: 1px solid var(--rule); }
-.site-header nav { display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; max-width: 480px; }
+.site-header nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(max-content, 1.35fr) minmax(0, 1fr); align-items: stretch; max-width: 540px; text-align: center; }
 .site-header a { display: grid; min-height: 48px; place-items: center; color: var(--pine); font-weight: 700; text-decoration: none; font-size: 14px; }
+.site-header a[href="#places"] { padding-inline: 4px; }
 .site-header a:hover { background: var(--highlight); }
 .site-header a:focus-visible { outline-offset: -4px; }
 
@@ -153,6 +154,27 @@ h3 { font-size: 17px; line-height: 1.34; letter-spacing: -.035em; }
 .original-photo { display: inline-flex; min-height: 44px; align-items: center; font-size: 13px; }
 .place-card h3 { margin-bottom: 4px; }
 .place-card > p:not(.action-links) { color: var(--muted); font-size: 13px; }
+
+.destination-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.destination-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--rule); border-radius: 12px; background: var(--card); }
+.destination-card .photo-link { aspect-ratio: 4 / 3; border: 0; border-bottom: 1px solid var(--rule); border-radius: 11px 11px 0 0; background: var(--highlight); }
+.destination-card img { width: 100%; height: 100%; object-fit: cover; }
+.destination-card img[src$="tan-dinh.webp"] { object-position: center 28%; }
+.destination-copy { display: flex; flex: 1; flex-direction: column; padding: 9px 11px 2px; }
+.destination-when { margin-bottom: 3px; color: var(--rust); font-size: 12px; font-weight: 700; }
+.destination-note { flex: 1; margin-top: 5px; color: var(--muted); font-size: 13px; }
+.destination-copy .action-links { gap: 0 10px; }
+.destination-copy .action-links a { min-width: 44px; }
+.destination-credits { margin-block: 7px 16px; color: var(--muted); font-size: 13px; }
+.destination-credits summary { padding-block: 11px; cursor: pointer; }
+.destination-credits ul { margin: 0 0 6px; padding-inline-start: 20px; }
+.places-more { margin-bottom: 8px; }
+
+@media (max-width: 355px) {
+  .destination-grid { grid-template-columns: 1fr; }
+  .site-header a { font-size: 12px; }
+}
 @media (min-width: 680px) {
-  .place-grid, .captures .photo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .place-grid, .captures .photo-grid, .destination-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .destination-copy { padding: 12px 14px 3px; }
 }

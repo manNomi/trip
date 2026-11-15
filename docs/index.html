@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=3">
+  <link rel="stylesheet" href="./styles.css?v=4">
   <script src="./checklist.js" defer></script>
   <script src="./stay.js?v=2" defer></script>
   <script src="./gallery.js" defer></script>
@@ -28,6 +28,7 @@
       <a href="#itinerary">일정</a>
       <a href="#flights">항공편</a>
       <a href="#stay">숙소</a>
+      <a href="#places">가볼 만한 곳</a>
       <a href="#packing">준비물</a>
     </nav>
   </header>
@@ -45,7 +46,7 @@
     <section class="shell section itinerary" id="itinerary" aria-labelledby="itinerary-title">
       <div class="section-heading">
         <h2 id="itinerary-title">우리 이렇게 돌아보자</h2>
-        <a class="text-link" href="#places">여기도 가보고 싶어!</a>
+        <a class="text-link" href="#places">가볼 만한 곳 사진 보기</a>
       </div>
       <ol class="days">
         <li>
@@ -233,7 +234,97 @@
     </section>
 
   <section class="shell section" id="places" aria-labelledby="places-title">
-    <div class="section-heading"><h2 id="places-title">여기도 가보고 싶어!</h2></div>
+    <div class="section-heading">
+      <h2 id="places-title">가볼 만한 곳</h2>
+      <p class="section-note">우리 동선 따라 골라봤어. 근처 지나가면 하나씩 들러보자!</p>
+    </div>
+    <div class="destination-grid">
+      <article class="destination-card">
+        <a class="photo-link" href="./assets/places/cafe-apartments.webp"><img src="./assets/places/cafe-apartments.webp" alt="응우옌후에 카페 아파트 발코니에 층층이 달린 카페 간판" width="1000" height="750" loading="lazy"></a>
+        <div class="destination-copy">
+          <p class="destination-when"><time datetime="2026-12-13">12.13</time> 저녁</p>
+          <h3>카페 아파트</h3>
+          <p class="destination-note">응우옌후에 42번지! 광장에서 건물 찍고 발코니 있는 카페 하나 골라보자.</p>
+          <div class="action-links">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=The+Cafe+Apartments+42+Nguyen+Hue+Ho+Chi+Minh+City" aria-label="카페 아파트 지도">지도</a>
+            <a href="https://www.vietnamairlines.com/vn/en/plan-book/travel/travel-guide/the-cafe-apartment" aria-label="카페 아파트 안내">둘러보기</a>
+          </div>
+        </div>
+      </article>
+      <article class="destination-card">
+        <a class="photo-link" href="./assets/places/bach-dang.webp"><img src="./assets/places/bach-dang.webp" alt="사이공강 박당 선착장에 정박한 수상버스" width="1000" height="563" loading="lazy"></a>
+        <div class="destination-copy">
+          <p class="destination-when"><time datetime="2026-12-13">12.13</time> 산책</p>
+          <h3>박당 강변</h3>
+          <p class="destination-note">첫날엔 강 따라 걷자. 셋째 날 배 타면 돌아오는 표도 같이 보기!</p>
+          <div class="action-links">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Bach+Dang+Station+Saigon+Waterbus+Ho+Chi+Minh+City" aria-label="박당 선착장 지도">지도</a>
+            <a href="https://saigonwaterbus.com/dat-ve-truc-tuyen">배 시간표</a>
+          </div>
+        </div>
+      </article>
+      <article class="destination-card">
+        <a class="photo-link" href="./assets/places/post-office.webp"><img src="./assets/places/post-office.webp" alt="중앙우체국 입구에서 본 아치형 천장과 홀" width="1000" height="509" loading="lazy"></a>
+        <div class="destination-copy">
+          <p class="destination-when"><time datetime="2026-12-14">12.14</time> 오전</p>
+          <h3>중앙우체국이랑 책거리</h3>
+          <p class="destination-note">우체국에서 아치 천장 구경하고 바로 옆 책거리까지 걸어보자.</p>
+          <div class="action-links">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Saigon+Central+Post+Office+Ho+Chi+Minh+City&amp;destination=Nguyen+Van+Binh+Book+Street+Ho+Chi+Minh+City&amp;travelmode=walking">도보 경로</a>
+            <a href="https://visithcmc.net/en/news/khong-gian-an-tuong-cho-tin-do-yeu-sach">책거리 안내</a>
+          </div>
+        </div>
+      </article>
+      <article class="destination-card">
+        <a class="photo-link" href="./assets/places/opera-house.webp"><img src="./assets/places/opera-house.webp" alt="밤에 조명이 켜진 사이공 오페라하우스의 정면" width="1000" height="664" loading="lazy"></a>
+        <div class="destination-copy">
+          <p class="destination-when"><time datetime="2026-12-14">12.14</time> 저녁 후보</p>
+          <h3>오페라하우스</h3>
+          <p class="destination-note">앞에서 사진 한 장 찍자. 공연도 보고 싶으면 A O 쇼 시간부터 보기!</p>
+          <div class="action-links">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Saigon+Opera+House+Ho+Chi+Minh+City" aria-label="오페라하우스 지도">지도</a>
+            <a href="https://www.luneproduction.com/ao-show">공연 안내</a>
+          </div>
+        </div>
+      </article>
+      <article class="destination-card">
+        <a class="photo-link" href="./assets/places/tan-dinh.webp"><img src="./assets/places/tan-dinh.webp" alt="분홍색 떤딘성당 외관과 첨탑" width="960" height="1432" loading="lazy"></a>
+        <div class="destination-copy">
+          <p class="destination-when"><time datetime="2026-12-15">12.15</time> 오전</p>
+          <h3>핑크성당이랑 콩카페</h3>
+          <p class="destination-note">성당 앞에서 사진 찍고 길 건너 콩카페에서 코코넛 커피 마시자.</p>
+          <div class="action-links">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Tan+Dinh+Church+289+Hai+Ba+Trung+Ho+Chi+Minh+City" aria-label="떤딘성당 지도">성당 지도</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Cong+Caphe+274+Hai+Ba+Trung+Ho+Chi+Minh+City">콩카페 지도</a>
+          </div>
+        </div>
+      </article>
+      <article class="destination-card">
+        <a class="photo-link" href="./assets/places/fine-arts.webp"><img src="./assets/places/fine-arts.webp" alt="발코니와 아치가 있는 호치민 시립미술관의 연노란 건물" width="1000" height="716" loading="lazy"></a>
+        <div class="destination-copy">
+          <p class="destination-when">시간 남으면</p>
+          <h3>호치민 시립미술관</h3>
+          <p class="destination-note">벤탄시장 근처 연노란 건물! 안뜰이랑 전시 천천히 둘러보자.</p>
+          <div class="action-links">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Ho+Chi+Minh+City+Museum+of+Fine+Arts+97A+Pho+Duc+Chinh" aria-label="호치민 시립미술관 지도">지도</a>
+            <a href="https://hello.hochiminhcity.gov.vn/en/discover/bao-tang-my-thuat-tp-hcm">관람 안내</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <details class="destination-credits">
+      <summary>사진 출처</summary>
+      <ul>
+        <li><a href="https://commons.wikimedia.org/wiki/File:42_Nguyen_Hue_Boulevard,_Saigon_(53547606514).jpg">카페 아파트 / Werner Bayer</a> / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Bach_Dang_Station_-_Sai_Gon_Water_Bus.jpg">박당 선착장 / Pk.over</a> / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:20190923_Saigon_Central_Post_Office_interior-1.jpg">중앙우체국 / Balon Greyjoy</a> / <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Saigon_Opera_House_Municipal_Theatre_of_Ho_Chi_Minh_City_(14531950337).jpg">오페라하우스 / rjabalosIII</a> / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Nh%C3%A0_th%E1%BB%9D_T%C3%A2n_%C4%90%E1%BB%8Bnh,_l%27%C3%89glise_Rose_de_S%C3%A0i_G%C3%B2n_(32571419807).jpg">떤딘성당 / sketyl</a> / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:B%E1%BA%A3o_t%C3%A0ng_M%E1%BB%B9_thu%E1%BA%ADt_Tp_(ki%E1%BA%BFn_tr%C3%BAc_t%E1%BB%95ng_th%E1%BB%83)_(2).jpg">시립미술관 / Phương Huy</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+      </ul>
+      <p>사진은 크기와 파일 형식을 바꿨어. 카드에서는 화면에 맞춰 일부를 잘라서 보여줘.</p>
+    </details>
+    <h3 class="places-more">여기도 저장해뒀어</h3>
     <div class="place-grid">
       <article class="ticket place-card"><h3>벱 메 인</h3><p>벤탄시장 근처야. 새우랑 돼지고기 들어간 반쎄랑 코코넛 볶음밥 시켜서 같이 먹어보자.</p><p class="action-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=B%E1%BA%BFp+M%E1%BA%B9+%E1%BB%88n+136+Le+Thanh+Ton+Ho+Chi+Minh+City">지도</a><a href="https://guide.michelin.com/sg/en/ho-chi-minh/ho-chi-minh_2978179/restaurant/bep-me-in-le-thanh-ton">미쉐린 안내</a></p></article>
       <article class="ticket place-card"><h3>꾹각꽌</h3><p>떤딘 쪽 베트남 가정식집이야. 여기 가면 레몬그라스 두부튀김이랑 생선 수프 먹어보자.</p><p class="action-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=C%E1%BB%A5c+G%E1%BA%A1ch+Qu%C3%A1n+10+Dang+Tat+Ho+Chi+Minh+City">지도</a><a href="https://guide.michelin.com/gb/en/ho-chi-minh/ho-chi-minh_2978179/restaurant/cuc-gach-quan">미쉐린 안내</a></p></article>
@@ -273,7 +364,7 @@
   </footer>
   <dialog class="photo-dialog" id="photo-viewer" aria-labelledby="photo-title">
     <div class="photo-toolbar">
-      <h2 id="photo-title">숙소 사진</h2>
+      <h2 id="photo-title">사진</h2>
       <form method="dialog"><button type="submit" autofocus>닫기</button></form>
     </div>
     <img alt="">
