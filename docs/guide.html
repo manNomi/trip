@@ -5,17 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://mannomi.github.io/trip/">
-  <title>우리 호치민 간다!</title>
-  <script>
-    const previous = location.hash;
-    const sections = ["#top", "#flights", "#stay", "#itinerary", "#places", "#transport", "#packing"];
-    const destination = new URL(location.protocol === "file:" ? "./index.html" : "./", location.href);
-    if (previous === "#hotel") destination.hash = "#stay";
-    else if (sections.includes(previous)) destination.hash = previous;
-    location.replace(destination);
-  </script>
+  <title>호치민 여행 가이드</title>
+  <script src="./legacy.js"></script>
 </head>
 <body>
-  <main><h1>우리 호치민 간다!</h1><p><a href="./index.html">여행 안내 열기</a></p></main>
+  <main><h1>호치민 여행 가이드</h1><p><a href="./index.html">여행 가이드 열기</a></p></main>
 </body>
 </html>
