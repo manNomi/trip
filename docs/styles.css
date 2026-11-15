@@ -10,7 +10,6 @@
   --mist: #eaf1e9;
   --orange: #b64a2f;
   --sans: "Noto Sans KR", sans-serif;
-  --display: "DM Serif Text", Georgia, serif;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-padding-top: 114px; }
@@ -33,8 +32,7 @@ button { cursor: pointer; }
 .skip:focus { transform: none; }
 .site-header { position: sticky; inset-block-start: 0; z-index: 3; border-bottom: 1px solid var(--rule); background: var(--white); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 28px; }
-.brand { display: inline-flex; align-items: center; gap: 9px; color: var(--deep); text-decoration: none; white-space: nowrap; font-weight: 750; letter-spacing: -.035em; font-size: 18px; }
-.brand-mark { display: grid; place-items: center; width: 33px; height: 33px; border-radius: 50%; background: var(--forest); color: var(--white); font: 22px/1 var(--display); letter-spacing: 0; }
+.brand { display: inline-flex; align-items: center; color: var(--deep); text-decoration: none; white-space: nowrap; font-weight: 750; letter-spacing: -.035em; font-size: 18px; }
 .site-nav { display: flex; align-items: stretch; }
 .site-nav a { display: grid; place-items: center; min-height: 72px; padding-inline: clamp(12px, 2vw, 24px); border-bottom: 2px solid transparent; color: var(--muted); font-weight: 650; text-align: center; text-decoration: none; white-space: nowrap; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--forest); border-bottom-color: var(--forest); }
@@ -142,10 +140,12 @@ time, .money { font-variant-numeric: tabular-nums; }
 .capture-grid img { width: 100%; height: auto; border-radius: 6px; }
 .capture-grid figcaption { color: var(--muted); font-size: 13px; margin-top: 4px; }
 
+.itinerary-page h1 { font-size: clamp(28px, 4.6vw, 44px); }
+.itinerary-page h2 { font-size: clamp(19px, 2.6vw, 26px); }
 .timeline { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--rule); }
 .timeline li { display: grid; grid-template-columns: 185px minmax(0,1fr); gap: 22px; align-items: start; padding-block: 22px; border-top: 1px solid var(--rule); }
 .timeline-date { color: var(--forest); font-weight: 700; }
-.timeline-date time { display: block; font-size: 23px; line-height: 1.3; margin-block: 3px; }
+.timeline-date time { display: block; font-size: clamp(17px, 2.2vw, 20px); line-height: 1.3; margin-block: 3px; }
 .timeline .actions { margin-top: 8px; }
 .timeline .text-link { font-size: 13px; }
 .day-plan { margin-top: 8px; color: var(--muted); }
@@ -176,7 +176,6 @@ time, .money { font-variant-numeric: tabular-nums; }
   .shell { width: calc(100% - 32px); }
   .header-inner { min-height: 0; gap: 0; align-items: stretch; flex-direction: column; }
   .brand { min-height: 46px; font-size: 16px; }
-  .brand-mark { width: 27px; height: 27px; font-size: 18px; }
   .site-nav { display: grid; grid-template-columns: repeat(3,1fr) minmax(max-content,1.45fr) 1fr; }
   .site-nav a { min-height: 43px; padding-inline: 5px; font-size: 13px; }
   .hero { min-height: 423px; }
@@ -191,7 +190,6 @@ time, .money { font-variant-numeric: tabular-nums; }
   .home-stay { grid-template-columns: 1fr; }
   .home-stay img { aspect-ratio: 1.75; }
   .timeline li { grid-template-columns: 87px minmax(0,1fr); gap: 10px; }
-  .timeline-date time { font-size: 19px; }
 }
 @media (max-width: 380px) {
   .shell { width: calc(100% - 24px); }
