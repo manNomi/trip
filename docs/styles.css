@@ -111,11 +111,25 @@ time, .money { font-variant-numeric: tabular-nums; }
 .stay-media img { position: absolute; z-index: -1; width: 100%; height: 100%; object-fit: cover; }
 .stay-media .photo-link span { justify-self: start; margin: 8px; padding: 3px 7px; border-radius: 4px; background: #10271ee6; color: white; font-size: 11px; }
 .stay-media .photo-link + .photo-link { aspect-ratio: auto; }
-.stay-gallery { margin-top: 8px; }
-.stay-gallery summary { padding-block: 10px; min-height: 44px; color: var(--forest); cursor: pointer; font-weight: 650; font-size: 14px; }
-.stay-gallery-grid, .compare-photo-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-.stay-gallery-grid img, .compare-photo-pair img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
-.stay-gallery-grid figcaption, .compare-photo-pair span { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
+.stay-gallery { margin-top: 15px; min-width: 0; }
+.stay-gallery-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 10px; margin-bottom: 7px; }
+.stay-gallery-heading strong { color: var(--forest); font-size: 14px; }
+.stay-gallery-heading .meta { margin: 0; font-size: 12px; }
+.stay-gallery-photos {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 40%;
+  gap: 9px;
+  overflow-x: auto;
+  padding-bottom: 7px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) var(--mist);
+}
+.stay-gallery-photos figure { min-width: 0; scroll-snap-align: start; }
+.stay-gallery-photos .photo-link { border-radius: 7px; overflow: hidden; background: var(--mist); }
+.stay-gallery-photos img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.stay-gallery-photos figcaption { margin-top: 4px; color: var(--muted); font-size: 12px; line-height: 1.4; }
 .stay-card > .stay-body { display: flex; flex: 1; flex-direction: column; padding: 16px clamp(15px, 2.5vw, 25px) 20px; }
 .stay-area { color: var(--orange); font-size: 12px; font-weight: 700; margin-top: 4px; }
 .stay-body .meta { margin-top: 4px; }
@@ -131,14 +145,6 @@ time, .money { font-variant-numeric: tabular-nums; }
 .stay-rates, .trip-checklist { display: grid; gap: 8px 16px; padding: 0; list-style: none; }
 .stay-rates .text-link { min-height: 44px; }
 .stay-rates .money { margin-inline-start: 8px; }
-.compare { background: var(--white); border: 1px solid var(--rule); border-radius: 12px; }
-.compare summary { min-height: 50px; cursor: pointer; padding: 12px 16px; font-size: 17px; font-weight: 750; }
-.compare-content { padding: 0 16px 15px; }
-.compare table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 14px; }
-.compare th, .compare td { padding: 9px 8px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
-.compare thead th { color: var(--forest); border-bottom-color: var(--forest); }
-.compare th:first-child { width: clamp(48px, 20%, 125px); }
-.compare th select { width: 100%; min-height: 44px; padding: 4px; border: 1px solid var(--rule); border-radius: 5px; color: var(--forest); background: var(--white); text-overflow: ellipsis; }
 .book-panel { background: var(--white); border: 1px solid var(--rule); border-radius: 12px; padding: 18px; }
 .book-panel summary { cursor: pointer; padding-block: 9px; }
 .capture-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
@@ -194,6 +200,7 @@ time, .money { font-variant-numeric: tabular-nums; }
   .destination-note { font-size: 13px; }
   .destination-extras { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .stay-grid, .tickets { grid-template-columns: 1fr; gap: 13px; }
+  .stay-gallery-photos { grid-auto-columns: clamp(145px, 56%, 220px); }
   .home-stay { grid-template-columns: 1fr; }
   .home-stay img { aspect-ratio: 1.75; }
   .timeline li { grid-template-columns: 87px minmax(0,1fr); gap: 10px; }
@@ -203,8 +210,6 @@ time, .money { font-variant-numeric: tabular-nums; }
   .site-nav a { font-size: 12px; }
   .destination-grid { grid-template-columns: 1fr; }
   .destination-extras { grid-template-columns: 1fr; }
-  .compare-content { padding-inline: 7px; }
-  .compare th, .compare td { padding-inline: 4px; font-size: 12px; }
   .timeline li { display: block; }
   .timeline-date { display: flex; gap: 8px; align-items: baseline; margin-bottom: 4px; }
   .capture-grid { grid-template-columns: 1fr; }
@@ -212,12 +217,3 @@ time, .money { font-variant-numeric: tabular-nums; }
 
 .hero-credit { margin-top: 7px; color: var(--muted); font-size: 11px; }
 .stay-price { margin-top: 9px; }
-.compare-content { padding-top: 9px; }
-@media (max-width: 740px) {
-  .compare th:first-child { width: 21%; }
-  .compare th select { font-size: 12px; }
-  .compare th, .compare td { padding-inline: 5px; }
-}
-@media (max-width: 500px) {
-  .compare-photo-pair { grid-template-columns: 1fr; }
-}
