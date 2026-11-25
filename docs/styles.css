@@ -153,15 +153,43 @@ time, .money { font-variant-numeric: tabular-nums; }
 
 .itinerary-page h1 { font-size: clamp(28px, 4.6vw, 44px); }
 .itinerary-page h2 { font-size: clamp(19px, 2.6vw, 26px); }
-.timeline { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--rule); }
-.timeline li { display: grid; grid-template-columns: 185px minmax(0,1fr); gap: 22px; align-items: start; padding-block: 22px; border-top: 1px solid var(--rule); }
-.timeline-date { color: var(--forest); font-weight: 700; }
-.timeline-date time { display: block; font-size: clamp(17px, 2.2vw, 20px); line-height: 1.3; margin-block: 3px; }
-.timeline .actions { margin-top: 8px; }
-.timeline .text-link { font-size: 13px; }
-.day-plan { margin-top: 8px; color: var(--muted); }
-.day-plan > div { display: grid; grid-template-columns: 52px 1fr; gap: 10px; padding-block: 5px; }
-.day-plan dt { font-weight: 700; }
+.itinerary-page .shell { max-width: 780px; }
+.itinerary-page .page-intro { padding-block: clamp(20px, 4vw, 48px) 14px; }
+.itinerary-layout { padding-bottom: 44px; overflow-wrap: anywhere; }
+.trip-dates { position: sticky; top: 73px; z-index: 2; display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 5px; padding-block: 8px; background: var(--paper); }
+.trip-dates .chip { padding-inline: 3px; font-size: clamp(11px, 2.7vw, 15px); white-space: nowrap; }
+.trip-dates .chip[aria-current] { color: var(--white); background: var(--forest); border-color: var(--forest); }
+.trip-day, .trip-help { scroll-margin-top: 46px; }
+.trip-day + .trip-day, .trip-help { margin-top: 18px; }
+.trip-day[hidden] + .trip-day { margin-top: 0; }
+.trip-lead { padding: clamp(15px, 3vw, 24px); border-radius: 12px; color: var(--white); background: var(--deep); }
+.trip-lead p, .trip-panel p + p { margin-top: 6px; }
+.trip-lead .milestone { color: #f6d78b; font-weight: 750; }
+.trip-lead .next-status { font-weight: 700; }
+.trip-panel { padding: clamp(12px, 3vw, 20px); margin-top: 12px; }
+.trip-panel h3 { font-size: clamp(16px, 2.5vw, 19px); margin-bottom: 4px; }
+.trip-panel .actions { margin-block: 6px 0; gap: 5px 8px; }
+.trip-panel .actions a { display: inline-flex; align-items: center; min-height: 44px; padding: 4px 9px; border-radius: 6px; color: var(--deep); background: var(--mist); text-decoration: none; font-size: 13px; font-weight: 700; }
+.trip-panel .actions a:hover { text-decoration: underline; }
+.trip-fallback { background: #fff2d7; border-color: #ead4a2; }
+.trip-steps, .itinerary-page .trip-checklist { list-style: none; padding: 0; margin: 10px 0 0; }
+.itinerary-page .trip-checklist { gap: 0; }
+.trip-steps li, .itinerary-page .trip-checklist li { padding-block: 12px; border-top: 1px solid var(--rule); }
+.trip-steps li:last-child, .itinerary-page .trip-checklist li:last-child { padding-bottom: 0; }
+.trip-steps li { display: grid; grid-template-columns: 56px minmax(0,1fr); align-items: start; gap: 8px; }
+.trip-clock { width: fit-content; padding: 2px 5px; color: var(--forest); font-weight: 750; }
+.trip-clock small { display: block; font-size: 11px; font-weight: 600; }
+.trip-steps [aria-current="step"] .trip-clock { border-radius: 6px; color: var(--white); background: var(--forest); }
+.trip-address { font-weight: 700; user-select: all; }
+.trip-help summary, .trip-options summary { font-weight: 700; }
+#checklist-progress { margin-left: 4px; }
+@media print {
+  body:has(.itinerary-page) .site-header, .itinerary-page .trip-dates { display: none; }
+  .itinerary-page .trip-day[hidden] { display: block !important; }
+  .trip-lead { background: transparent; color: var(--ink); }
+  .trip-lead .milestone { color: var(--ink); }
+  .trip-steps li, .trip-checklist li { break-inside: avoid; }
+}
 .tickets { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
 .ticket { padding: clamp(15px, 2.8vw, 26px); background: var(--white); border: 1px solid var(--rule); border-radius: 12px; }
 .ticket-head, .ticket-foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px 12px; }
@@ -191,6 +219,7 @@ time, .money { font-variant-numeric: tabular-nums; }
   .brand { min-height: 46px; font-size: 16px; }
   .site-nav { display: grid; grid-template-columns: repeat(3,1fr) minmax(max-content,1.45fr) 1fr; }
   .site-nav a { min-height: 43px; padding-inline: 5px; font-size: 13px; }
+  .trip-dates { top: 90px; }
   .hero { min-height: 423px; }
   .hero::after { background: linear-gradient(0deg,#0b211af5,#10271e84 55%,#10271e05); }
   .hero img { object-position: 56% center; }
@@ -203,15 +232,12 @@ time, .money { font-variant-numeric: tabular-nums; }
   .stay-gallery-photos { grid-auto-columns: clamp(145px, 56%, 220px); }
   .home-stay { grid-template-columns: 1fr; }
   .home-stay img { aspect-ratio: 1.75; }
-  .timeline li { grid-template-columns: 87px minmax(0,1fr); gap: 10px; }
 }
 @media (max-width: 380px) {
   .shell { width: calc(100% - 24px); }
   .site-nav a { font-size: 12px; }
   .destination-grid { grid-template-columns: 1fr; }
   .destination-extras { grid-template-columns: 1fr; }
-  .timeline li { display: block; }
-  .timeline-date { display: flex; gap: 8px; align-items: baseline; margin-bottom: 4px; }
   .capture-grid { grid-template-columns: 1fr; }
 }
 

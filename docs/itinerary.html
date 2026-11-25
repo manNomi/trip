@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="2026년 12월 13일부터 16일까지의 호치민 도심 여행 일정과 도보 경로입니다.">
+  <meta name="description" content="2026년 12월 13일부터 16일까지의 호치민 여행의 날짜별 일정과 길찾기 및 출발 전 준비를 확인하세요.">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#f8f7f3">
   <meta property="og:title" content="호치민 3박 4일 일정 | 호치민 여행 가이드">
-  <meta property="og:description" content="2026년 12월 13일부터 16일까지의 호치민 도심 여행 일정과 도보 경로입니다.">
+  <meta property="og:description" content="2026년 12월 13일부터 16일까지의 호치민 여행의 날짜별 일정과 길찾기 및 출발 전 준비를 확인하세요.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mannomi.github.io/trip/itinerary.html">
   <meta property="og:image" content="https://mannomi.github.io/trip/assets/saigon-skyline.webp">
@@ -17,8 +17,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=6">
-  <script src="./checklist.js" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=7">
+  <script src="./checklist.js?v=2" defer></script>
+  <script src="./itinerary.js" defer></script>
 </head>
 <body>
   <a href="#content" class="skip">본문 바로가기</a>
@@ -37,94 +38,323 @@
   <main id="content" class="itinerary-page">
     <section class="shell page-intro" id="itinerary" aria-labelledby="page-title">
       <h1 id="page-title">호치민 3박 4일 일정</h1>
-      <p>2026.12.13~12.16 / 1군 숙소 기준으로 짠 동선입니다. 시내 일정은 호치민 현지 시각이며 이동 상황에 따라 조정할 수 있습니다.</p>
+      <p>2026년 12월 13일~16일</p>
     </section>
-    <div class="shell jump-links" aria-label="여행 일정 바로가기">
-      <a class="chip" href="#day-1">1일 차</a><a class="chip" href="#day-2">2일 차</a><a class="chip" href="#day-3">3일 차</a><a class="chip" href="#day-4">4일 차</a>
-      <a class="chip" href="#packing">출발 전 준비</a>
+    <div class="shell itinerary-layout">
+      <nav class="trip-dates" aria-label="날짜별 여행 일정">
+        <a class="chip" href="#packing">출발 전</a>
+        <a class="chip" href="#day-1">12/13 일</a>
+        <a class="chip" href="#day-2">12/14 월</a>
+        <a class="chip" href="#day-3">12/15 화</a>
+        <a class="chip" href="#day-4">12/16 수</a>
+      </nav>
+      <section class="trip-day" id="packing" aria-labelledby="packing-title">
+        <header class="trip-lead">
+          <h2 id="packing-title">출발 전 준비</h2>
+          <p class="milestone">12월 13일 07:50까지 인천공항 T1 도착</p>
+          <p>준비는 아래 순서대로 진행합니다.</p>
+          <p class="next-status" id="next-preparation" hidden></p>
+        </header>
+        <div class="book-panel trip-panel">
+          <h3>챙길 것 <span class="meta" id="checklist-progress" aria-live="polite"></span></h3>
+          <p class="meta">완료한 항목을 체크하면 같은 브라우저에 저장됩니다.</p>
+          <ul class="checklist trip-checklist">
+            <li>
+              <label><input type="checkbox" value="documents">오늘 여권 확인과 예약 서류 저장</label>
+              <p>두 사람 여권 만료일과 영문명 확인. 왕복 전자항공권과 호텔 바우처를 휴대폰 파일에 저장합니다. 수하물 허용량은 왕복 각 전자항공권에서 확인합니다.</p>
+              <div class="actions"><a href="https://www.mofa.go.kr/vn-ko/brd/m_2203/view.do?seq=1345931">무비자 체류와 여권 유효기간 기준</a></div>
+            </li>
+            <li>
+              <label><input type="checkbox" value="travel-insurance">12/11까지 여행보험 가입</label>
+              <p>두 사람을 등록하고 집에서 나가는 시각부터 귀가 예정 시각까지 보장 기간을 잡습니다. 가입증서와 긴급 연락처를 저장합니다.</p>
+              <div class="actions"><a href="https://www.kakaopayinscorp.co.kr/products/FAA001">카카오페이 해외여행보험</a></div>
+            </li>
+            <li>
+              <label><input type="checkbox" value="esim">12/11까지 eSIM과 Grab 준비</label>
+              <p>두 휴대폰의 eSIM 지원과 요금제 시작 조건을 확인한 뒤 안내대로 설치합니다. 한국에서 Grab 가입과 결제수단 등록을 마칩니다.</p>
+              <div class="actions">
+                <a href="https://shop.usimsa.com/sim/1A9D30E5-6A69-EE11-BBF0-28187860D6D3">베트남 eSIM</a>
+                <a href="https://support.apple.com/ko-kr/118227">아이폰 설정</a>
+                <a href="https://www.samsungsvc.co.kr/solution/1071978">갤럭시 설정</a>
+              </div>
+            </li>
+            <li>
+              <label><input type="checkbox" value="arrival-declaration">12/11 베트남 사전 입국신고</label>
+              <p>두 사람이 각각 신청합니다. 입국일 12/13, 편명 VJ863, 도착 공항 SGN, 예약한 숙소 주소를 입력하고 QR을 캡처합니다.</p>
+              <div class="actions">
+                <a href="https://prearrival.immigration.gov.vn/">이민국 공식 신고</a>
+                <a href="https://hochiminh.mofa.go.kr/vn-hochiminh-ko/brd/m_27024/view.do?seq=1339312">총영사관 공지</a>
+                <a href="https://prearrival.immigration.gov.vn/assets/UM/PAI_User_Guide_KO.pdf">신고서 한국어 작성 안내</a>
+              </div>
+            </li>
+            <li>
+              <label><input type="checkbox" value="lastcheck">12/12 밤 항공편 확인과 알람 설정</label>
+              <p>왕복 예약에서 시각과 터미널 변경 여부를 확인합니다. 공항 알람을 맞추고 여권과 보조배터리는 기내 가방에 넣습니다. 현지에서 쓸 카드와 소액 현금을 챙깁니다.</p>
+              <div class="actions"><a href="#day-1">공항 가는 시각 보기</a></div>
+            </li>
+          </ul>
+        </div>
+        <div class="book-panel trip-panel">
+          <h3>시내 동선의 출발점</h3>
+          <p>일정에 표시한 공항 차량 경로와 도보 경로는 1군의 오 락 샤르네를 기준으로 합니다. 입국신고에는 실제로 묵는 숙소 주소를 입력하세요.</p>
+          <p class="trip-address" lang="vi">Khách sạn Âu Lạc Charner, 87-89-91 Hồ Tùng Mậu, Hồ Chí Minh</p>
+          <div class="actions">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Au+Lac+Charner+Hotel+87+Ho+Tung+Mau+Ho+Chi+Minh">숙소 지도</a>
+            <a href="./hotels.html">숙소와 호텔 사진</a>
+          </div>
+        </div>
+      </section>
+      <section class="trip-day" id="day-1" data-date="2026-12-13" aria-labelledby="day-1-title">
+        <header class="trip-lead">
+          <h2 id="day-1-title">인천 출발, 사이공강 산책</h2>
+          <p class="milestone">인천 T1에 07:50까지 도착</p>
+          <p>출발은 한국 시각. 호치민 도착부터 베트남 시각입니다.</p>
+          <p class="next-status" data-next-label hidden></p>
+        </header>
+        <div class="book-panel trip-panel">
+          <h3>시간순으로 따라가기</h3>
+          <ol class="trip-steps">
+            <li>
+              <div class="trip-clock"><time datetime="2026-12-13T05:49:00+09:00">05:49</time><small>한국</small></div>
+              <div>
+                <h3>사당 출발은 6016번</h3>
+                <p>낙성대에서는 택시로 사당역 11번 출구 앞 방배경찰서 정류장(22763)에 05:35까지 갑니다. 05:49 편을 놓치면 06:19 편의 T1 도착 예상을 확인하고 07:50을 넘기면 택시로 전환합니다.</p>
+                <div class="actions"><a href="https://www.airportlimousine.co.kr/sub/sub01.php?cat_no=22">6016 운수사 시간표</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="trip-clock"><time datetime="2026-12-13T06:21:00+09:00">06:21</time><small>한국</small></div>
+              <div>
+                <h3>복정 출발은 장지역에서 6600번</h3>
+                <p>복정역에서 8호선으로 한 정거장. 장지역 2번 출구 정류장(24442)에 06:05까지 도착합니다. 일찍 가려면 택시로 장지역에 가서 05:21 편을 탑니다. 06:21 편을 놓치면 택시로 T1에 바로 갑니다.</p>
+                <div class="actions"><a href="https://www.seoulairbus.com/timetableAll/7/0">6600 운수사 시간표</a></div>
+              </div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-13T07:50:00+09:00">07:50</time><small>한국</small></div>
+              <div>
+                <h3>인천 T1 도착, 비엣젯 카운터로</h3>
+                <p>출발 전광판에서 VJ863 카운터를 찾습니다. 여권과 왕복 항공권을 꺼내고 짐을 부친 뒤 보안검색과 출국심사를 통과합니다. 탑승구 변경을 확인하고 10:00까지 탑승구 도착을 목표로 합니다.</p>
+                <div class="actions"><a href="https://www.airport.kr/ap_ko/881/subview.do">인천공항 터미널 안내</a></div>
+              </div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-13T10:50:00+09:00">10:50</time><small>한국</small></div>
+              <div><h3>VJ863 인천 출발</h3><p>호치민 도착 예정은 14:20 현지 시각입니다.</p></div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-13T14:20:00+07:00">14:20</time><small>베트남</small></div>
+              <div>
+                <h3>호치민 T2에서 입국 후 GrabCar</h3>
+                <p>여권과 입국신고 QR 제시 → 수하물 수령 → 세관 → eSIM 데이터 연결 → GrabCar 호출. 앱이 지정한 탑승 위치로 가서 차량 번호를 맞춰 봅니다.</p>
+                <p class="meta">데이터가 안 되면 공항 Wi-Fi를 먼저 시도합니다. 호출이 안 되면 공항 공식 택시 카운터에 아래 목적지를 보여 줍니다.</p>
+                <p class="trip-address" lang="vi">Âu Lạc Charner, 87-89-91 Hồ Tùng Mậu</p>
+                <div class="actions">
+                  <a href="https://www.grab.com/global/airport-rides/tan-son-nhat-international-airport/">Grab 승차 안내</a>
+                  <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Tan+Son+Nhat+Airport+International+Terminal+T2&amp;destination=Au+Lac+Charner+87+Ho+Tung+Mau&amp;travelmode=driving">공항에서 숙소까지</a>
+                </div>
+              </div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-13T17:15:00+07:00">17:15</time></div>
+              <div>
+                <h3>체크인 후 응우옌후에와 박당 강변</h3>
+                <p>카페 아파트가 있는 응우옌후에를 거쳐 강변까지 걷습니다.</p>
+                <div class="actions"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Au+Lac+Charner+87+Ho+Tung+Mau&amp;destination=Bach+Dang+Wharf+Ho+Chi+Minh&amp;waypoints=42+Nguyen+Hue+The+Cafe+Apartments+Ho+Chi+Minh&amp;travelmode=walking">숙소에서 강변까지 걷기</a></div>
+              </div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-13T18:30:00+07:00">18:30</time></div>
+              <div>
+                <h3>꽌안응온에서 저녁</h3>
+                <p>160 Pasteur. 반쎄오와 쌀국수를 나눠 먹습니다.</p>
+                <div class="actions"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Quan+An+Ngon+160+Pasteur+Ho+Chi+Minh&amp;travelmode=walking">저녁 식당 길찾기</a></div>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="book-panel trip-panel trip-fallback">
+          <h3>18:00이 넘어 체크인하거나 비가 오면</h3>
+          <p>강변은 건너뛰고 저녁으로 바로 갑니다. 도착이 크게 늦거나 거센 비가 오면 숙소에서 식사하고 쉽니다. 당일 늦은 체크인이 예상되면 예약 앱으로 숙소에 도착 예정 시각을 보냅니다.</p>
+        </div>
+        <details class="book-panel trip-panel trip-options">
+          <summary>강변에서 시간이 남으면</summary>
+          <div class="actions">
+            <a href="https://saigonwaterbus.com/dat-ve-truc-tuyen">수상버스 왕복 시간</a>
+            <a href="./places.html#skydeck">사이공 스카이덱</a>
+          </div>
+        </details>
+      </section>
+      <section class="trip-day" id="day-2" data-date="2026-12-14" aria-labelledby="day-2-title">
+        <header class="trip-lead">
+          <h2 id="day-2-title">1군 도보 여행</h2>
+          <p class="milestone">09:00에 숙소를 나서 통일궁을 오전에 관람</p>
+          <p>시장부터 오페라하우스까지 도보. 시간은 호치민 현지 기준입니다.</p>
+          <p class="next-status" data-next-label hidden></p>
+        </header>
+        <div class="book-panel trip-panel">
+          <h3>시간순으로 따라가기</h3>
+          <ol class="trip-steps">
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-14T09:00:00+07:00">09:00</time></div>
+              <div>
+                <h3>벤탄시장, 이어서 통일궁</h3>
+                <p>시장에 30분 정도 들른 뒤 통일궁으로 이동합니다. 현장에서 관람권을 사고 궁 안을 둘러봅니다.</p>
+                <div class="actions"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Au+Lac+Charner+87+Ho+Tung+Mau&amp;destination=Independence+Palace+135+Nam+Ky+Khoi+Nghia+Ho+Chi+Minh&amp;waypoints=Ben+Thanh+Market+Ho+Chi+Minh&amp;travelmode=walking">오전 도보 길찾기</a><a href="https://dinhdoclap.gov.vn/en/visit/">통일궁 관람 안내</a></div>
+              </div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-14T11:45:00+07:00">11:45</time></div>
+              <div>
+                <h3>벱 메 인에서 점심</h3>
+                <p>Bếp Mẹ Ỉn, 136 Lê Thánh Tôn. 반쎄오나 코코넛 볶음밥을 주문합니다. 대기가 20분을 넘으면 벤탄시장 식당 구역에서 먹습니다.</p>
+                <div class="actions"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Bep+Me+In+136+Le+Thanh+Ton+Ho+Chi+Minh&amp;travelmode=walking">점심 식당 길찾기</a></div>
+              </div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-14T13:30:00+07:00">13:30</time></div>
+              <div>
+                <h3>시립박물관, 중앙우체국, 책거리</h3>
+                <p>호치민시 박물관을 먼저 관람합니다. 중앙우체국과 책거리를 본 뒤 동코이 거리를 따라 오페라하우스까지 걷습니다.</p>
+                <div class="actions"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Ho+Chi+Minh+City+Museum+65+Ly+Tu+Trong&amp;destination=Saigon+Opera+House+Ho+Chi+Minh&amp;waypoints=Saigon+Central+Post+Office%7CNguyen+Van+Binh+Book+Street&amp;travelmode=walking">오후 도보 길찾기</a></div>
+              </div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-14T18:00:00+07:00">18:00</time></div>
+              <div>
+                <h3>호아뚝에서 저녁</h3>
+                <p>Hoa Túc, 74/7 Hai Bà Trưng. 오페라하우스 근처입니다. 자몽 해산물 샐러드와 잎에 감싸 구운 소고기를 나눠 먹습니다.</p>
+                <div class="actions"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Hoa+Tuc+74+7+Hai+Ba+Trung+Ho+Chi+Minh&amp;travelmode=walking">저녁 식당 길찾기</a><a href="tel:+842838251676">호아뚝 전화</a></div>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="book-panel trip-panel trip-fallback">
+          <h3>비가 오거나 오전 일정이 밀리면</h3>
+          <p>오전에는 벤탄시장과 통일궁 중 통일궁을 먼저 갑니다. 오후에는 시립박물관과 중앙우체국 위주로 보고 책거리와 동코이 산책을 줄입니다.</p>
+        </div>
+        <details class="book-panel trip-panel trip-options">
+          <summary>저녁 공연을 보고 싶으면</summary>
+          <div class="actions"><a href="https://www.luneproduction.com/ao-show">오페라하우스 A O 쇼 일정</a></div>
+        </details>
+      </section>
+      <section class="trip-day" id="day-3" data-date="2026-12-15" aria-labelledby="day-3-title">
+        <header class="trip-lead">
+          <h2 id="day-3-title">떤딘과 박물관, 호티끼 저녁</h2>
+          <p class="milestone">10:30에 Grab으로 출발</p>
+          <p>오전은 느긋하게 시작하고 저녁에는 시장에서 먹습니다.</p>
+          <p class="next-status" data-next-label hidden></p>
+        </header>
+        <div class="book-panel trip-panel">
+          <h3>시간순으로 따라가기</h3>
+          <ol class="trip-steps">
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-15T08:30:00+07:00">08:30</time></div>
+              <div><h3>숙소에서 조식과 수영</h3><p>수영장 시간은 체크인 때 확인합니다. 비가 오면 조식 후 숙소에서 쉽니다.</p></div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-15T10:30:00+07:00">10:30</time></div>
+              <div>
+                <h3>떤딘성당 앞에서 내려 시장까지</h3>
+                <p>Grab 목적지는 Nhà thờ Tân Định. 길 건너 콩카페에 들른 뒤 시장을 걷습니다.</p>
+                <div class="actions"><a href="https://www.google.com/maps/search/?api=1&amp;query=Tan+Dinh+Church+Ho+Chi+Minh">떤딘성당 지도</a></div>
+              </div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-15T12:00:00+07:00">12:00</time></div>
+              <div>
+                <h3>꾹각꽌에서 점심</h3>
+                <p>Cục Gạch Quán, 10 Đặng Tất. 밥에 두부 요리와 볶은 채소를 같이 주문합니다.</p>
+                <div class="actions"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Tan+Dinh+Church+Ho+Chi+Minh&amp;destination=Cuc+Gach+Quan+10+Dang+Tat+Ho+Chi+Minh&amp;waypoints=Tan+Dinh+Market+Ho+Chi+Minh&amp;travelmode=walking">성당에서 시장과 식당까지</a></div>
+              </div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-15T14:00:00+07:00">14:00</time></div>
+              <div>
+                <h3>전쟁박물관</h3>
+                <p>28 Võ Văn Tần. 관람 시간을 1시간 30분 정도 잡습니다. 이동이 밀리면 카페나 시장 체류부터 줄입니다.</p>
+                <div class="actions"><a href="https://www.google.com/maps/search/?api=1&amp;query=War+Remnants+Museum+28+Vo+Van+Tan+Ho+Chi+Minh">전쟁박물관 지도</a></div>
+              </div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-15T17:30:00+07:00">17:30</time></div>
+              <div>
+                <h3>호티끼 꽃시장과 먹거리 골목</h3>
+                <p>Grab으로 Chợ hoa Hồ Thị Kỷ에 내려 골목에서 꼬치와 반미로 저녁을 먹습니다. 숙소로 돌아와 짐을 싸고 다음 날 07:45 출발 알람을 맞춥니다.</p>
+                <div class="actions"><a href="https://www.google.com/maps/search/?api=1&amp;query=Ho+Thi+Ky+Flower+Market+Ho+Chi+Minh">호티끼 지도</a></div>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="book-panel trip-panel trip-fallback">
+          <h3>비가 계속 오면</h3>
+          <p>성당은 차량에서 내려 짧게 보고 카페와 박물관 위주로 움직입니다. 저녁까지 비가 오면 호티끼 대신 숙소 근처 사이공센터 식당가로 갑니다.</p>
+          <div class="actions"><a href="https://www.google.com/maps/search/?api=1&amp;query=Saigon+Centre+65+Le+Loi+Ho+Chi+Minh">사이공센터 지도</a></div>
+        </div>
+      </section>
+      <section class="trip-day" id="day-4" data-date="2026-12-16" aria-labelledby="day-4-title">
+        <header class="trip-lead">
+          <h2 id="day-4-title">체크아웃, 인천행</h2>
+          <p class="milestone">07:45에 출발해 호치민 T2에 09:05까지 도착</p>
+          <p>출발은 베트남 시각. 인천 도착은 한국 시각입니다.</p>
+          <p class="next-status" data-next-label hidden></p>
+        </header>
+        <div class="book-panel trip-panel">
+          <h3>시간순으로 따라가기</h3>
+          <ol class="trip-steps">
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-16T07:00:00+07:00">07:00</time></div>
+              <div><h3>조식과 체크아웃</h3><p>여권 두 권, 캐리어, 충전기와 보조배터리를 챙깁니다. 프런트에서 체크아웃 후 Grab을 호출합니다.</p></div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-16T07:45:00+07:00">07:45</time></div>
+              <div>
+                <h3>호치민공항 국제선 T2로 출발</h3>
+                <p>목적지를 기사에게도 보여 줍니다. 앱 호출이 지연되면 프런트에 공항행 택시를 요청합니다. 교통이 막히면 조식 시간을 줄여 먼저 나갑니다.</p>
+                <p class="trip-address" lang="vi">Ga Quốc tế T2, Sân bay Tân Sơn Nhất</p>
+                <div class="actions"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Au+Lac+Charner+87+Ho+Tung+Mau&amp;destination=Tan+Son+Nhat+Airport+International+Terminal+T2&amp;travelmode=driving">숙소에서 국제선 T2까지</a></div>
+              </div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-16T09:05:00+07:00">09:05</time></div>
+              <div><h3>VJ860 카운터로 바로 이동</h3><p>전광판에서 카운터 확인 → 여권 제시와 짐 부치기 → 출국심사와 보안검색 → 탑승구 확인. 11:15까지 탑승구에 도착하는 것을 목표로 합니다. 식사와 쇼핑은 보안검색 후 시간 여유를 보고 합니다.</p></div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-16T12:05:00+07:00">12:05</time></div>
+              <div><h3>VJ860 호치민 출발</h3><p>인천공항 T1 도착 예정은 한국 시각 19:25입니다.</p></div>
+            </li>
+            <li data-next>
+              <div class="trip-clock"><time datetime="2026-12-16T19:25:00+09:00">19:25</time><small>한국</small></div>
+              <div>
+                <h3>인천 T1에서 짐 찾고 귀가</h3>
+                <p>장지 방면은 6600번이고 사당 방면은 6016번입니다. 도착층 공항버스 매표소에서 다음 편을 확인합니다. 배차가 길거나 막차가 끝났으면 공항철도로 이동합니다.</p>
+                <div class="actions"><a href="https://www.seoulairbus.com/timetableAll/7/0">6600 T1 출발표</a><a href="https://www.airportlimousine.co.kr/sub/sub01.php?cat_no=49">6016 공항 출발표</a><a href="https://www.arex.or.kr/">공항철도</a></div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <aside id="transport" class="trip-help" aria-labelledby="help-title">
+        <div class="book-panel trip-panel">
+          <h2 id="help-title">현지 이동과 긴급 연락</h2>
+          <p>1군 중심부는 도보로 잇고 떤딘과 호티끼는 GrabCar로 이동합니다.</p>
+          <div class="actions">
+            <a href="https://www.grab.com/global/airport-rides/tan-son-nhat-international-airport/">공항 Grab 승차 안내</a>
+            <a href="./flights.html#airport-bus">인천공항 버스 안내</a>
+          </div>
+          <details>
+            <summary>짐이 안 나오거나 항공편이 바뀜</summary>
+            <p>수하물이 안 나오면 수하물 구역을 나가기 전에 항공사 직원에게 짐표를 보여 주고 접수 확인서를 받습니다. 지연이나 결항은 전광판과 항공사 앱을 확인하고 이미 공항이면 항공사 카운터에 갑니다.</p>
+          </details>
+          <details>
+            <summary>여권 분실이나 긴급 상황</summary>
+            <p>여권을 잃어버리면 숙소에 현지 경찰 신고 도움을 요청하고 주호치민 총영사관 또는 영사콜센터에 연락합니다.</p>
+            <div class="actions"><a href="tel:+84938500238">총영사관 긴급전화</a><a href="tel:+82232100404">24시간 영사콜센터</a></div>
+          </details>
+        </div>
+      </aside>
+      <p class="data-note">11월 25일 기준입니다. 출발 전에 항공편은 예약 화면에서 확인하고 버스 시각은 운수사 시간표를 확인하세요.</p>
     </div>
-    <section class="shell page-section" aria-label="날짜별 일정"><ol class="timeline">
-        <li id="day-1">
-          <p class="timeline-date">1일 차 <time datetime="2026-12-13">12.13 일</time></p>
-          <div>
-            <h2>도착과 사이공강 산책</h2>
-            <dl class="day-plan">
-              <div><dt>14:20</dt><dd>탄손낫공항 T2 도착. 입국과 짐 찾기를 마친 뒤 그랩으로 숙소에 이동해 체크인합니다.</dd></div>
-              <div><dt>17:00</dt><dd>체크인 후 <a href="./places.html#cafe-apartments">카페 아파트</a>가 있는 응우옌후에를 지나 <a href="./places.html#bach-dang">박당 강변</a>까지 걷습니다. 도착이 늦으면 강변 산책과 저녁만 남깁니다.</dd></div>
-              <div><dt>선택</dt><dd>배를 타고 싶다면 박당과 빈안 사이 <a href="https://saigonwaterbus.com/dat-ve-truc-tuyen">수상버스 왕복 시간</a>을 먼저 확인하세요. 시야가 맑으면 같은 구역의 <a href="./places.html#skydeck">사이공 스카이덱</a>을 선택할 수 있습니다.</dd></div>
-            </dl>
-            <div class="actions"><a class="text-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=42+Nguyen+Hue+The+Cafe+Apartments%2C+Ho+Chi+Minh+City%2C+Vietnam&amp;destination=Bach+Dang+Wharf%2C+Ho+Chi+Minh+City%2C+Vietnam&amp;travelmode=walking">도보 지도</a></div>
-          </div>
-        </li>
-        <li id="day-2">
-          <p class="timeline-date">2일 차 <time datetime="2026-12-14">12.14 월</time></p>
-          <div>
-            <h2>시장부터 오페라하우스까지 도보</h2>
-            <dl class="day-plan">
-              <div><dt>09:00</dt><dd><a href="./places.html#ben-thanh">벤탄시장</a>에서 기념품을 둘러본 뒤 <a href="./places.html#independence-palace">통일궁</a>으로 걸어갑니다.</dd></div>
-              <div><dt>12:00</dt><dd>벱 메 인에서 점심을 먹고 <a href="./places.html#hcmc-museum">호치민시 박물관</a>을 둘러봅니다.</dd></div>
-              <div><dt>14:30</dt><dd><a href="./places.html#post-office">중앙우체국과 책거리</a>를 함께 본 뒤 동코이 거리를 따라 오페라하우스로 내려옵니다. 저녁은 공연 일정이 맞으면 A O 쇼를 보거나 인근에서 식사합니다.</dd></div>
-            </dl>
-            <div class="actions"><a class="text-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Ben+Thanh+Market%2C+Ho+Chi+Minh+City%2C+Vietnam&amp;destination=Independence+Palace+135+Nam+Ky+Khoi+Nghia%2C+Ho+Chi+Minh+City%2C+Vietnam&amp;travelmode=walking">오전 도보 지도</a> <a class="text-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Bep+Me+In+136+Le+Thanh+Ton%2C+Ho+Chi+Minh+City%2C+Vietnam&amp;destination=Saigon+Opera+House%2C+Ho+Chi+Minh+City%2C+Vietnam&amp;travelmode=walking&amp;waypoints=Ho+Chi+Minh+City+Museum+65+Ly+Tu+Trong%2C+Ho+Chi+Minh+City%2C+Vietnam%7CSaigon+Central+Post+Office%2C+Ho+Chi+Minh+City%2C+Vietnam%7CNguyen+Van+Binh+Book+Street%2C+Ho+Chi+Minh+City%2C+Vietnam">오후 도보 지도</a> <a class="text-link" href="https://www.luneproduction.com/ao-show">A O 쇼 일정</a></div>
-          </div>
-        </li>
-        <li id="day-3">
-          <p class="timeline-date">3일 차 <time datetime="2026-12-15">12.15 화</time></p>
-          <div>
-            <h2>수영과 떤딘 산책, 호티끼 저녁</h2>
-            <dl class="day-plan">
-              <div><dt>08:30</dt><dd>숙소에서 조식과 수영을 즐깁니다. 수영장 이용 시간은 선택한 숙소에서 확인하세요.</dd></div>
-              <div><dt>10:30</dt><dd>그랩으로 <a href="./places.html#tan-dinh">떤딘성당과 맞은편 콩카페</a>에 갑니다. <a href="./places.html#tan-dinh-market">떤딘시장</a>을 지나 꾹각꽌에서 점심을 먹습니다.</dd></div>
-              <div><dt>14:30</dt><dd><a href="./places.html#war-remnants">전쟁박물관</a>을 둘러봅니다. 마지막 입장은 17:00입니다.</dd></div>
-              <div><dt>17:30</dt><dd>박물관에서 그랩으로 <a href="./places.html#ho-thi-ky">호티끼 꽃시장과 먹거리 골목</a>에 이동해 꽃시장과 노점을 함께 둘러봅니다.</dd></div>
-            </dl>
-            <div class="actions"><a class="text-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=Tan+Dinh+Church%2C+Ho+Chi+Minh+City%2C+Vietnam&amp;destination=Cuc+Gach+Quan+10+Dang+Tat%2C+Ho+Chi+Minh+City%2C+Vietnam&amp;travelmode=walking&amp;waypoints=Tan+Dinh+Market%2C+Ho+Chi+Minh+City%2C+Vietnam">떤딘 도보 지도</a> <a class="text-link" href="https://www.google.com/maps/dir/?api=1&amp;origin=War+Remnants+Museum+28+Vo+Van+Tan%2C+Ho+Chi+Minh+City%2C+Vietnam&amp;destination=Ho+Thi+Ky+Flower+Market+Alley+52%2C+Ho+Chi+Minh+City%2C+Vietnam&amp;travelmode=driving">박물관에서 호티끼까지 차량 지도</a></div>
-          </div>
-        </li>
-        <li id="day-4">
-          <p class="timeline-date">4일 차 <time datetime="2026-12-16">12.16 수</time></p>
-          <div>
-            <h2>체크아웃과 인천행</h2>
-            <dl class="day-plan">
-              <div><dt>08:00</dt><dd>조식과 체크아웃을 마치고 숙소에서 그랩으로 출발합니다. 탄손낫공항 국제선 T2에 09:05까지 도착하는 것을 목표로 합니다.</dd></div>
-              <div><dt>12:05</dt><dd>비엣젯항공 VJ860으로 출발합니다. 인천공항 T1 도착은 한국 시각 19:25입니다.</dd></div>
-            </dl>
-            <div class="actions"><a class="text-link" href="https://www.grab.com/global/airport-rides/tan-son-nhat-international-airport/">그랩 공항 안내</a> <a class="text-link" href="./flights.html">왕복 항공편 보기</a></div>
-          </div>
-        </li>
-    </ol></section>
-    <section class="shell page-section" id="transport" aria-labelledby="transport-title">
-      <div class="section-heading"><h2 id="transport-title">공항과 시내 이동</h2></div>
-      <p>탄손낫공항 T2에 도착하면 그랩 앱에서 승차 위치를 확인하세요. 1군 안에서는 가까운 장소를 걸어서 잇고 떤딘과 호티끼로 이동할 때는 차량을 이용합니다.</p>
-      <div class="actions"><a class="text-link" href="https://www.grab.com/global/airport-rides/tan-son-nhat-international-airport/">그랩 공항 안내</a> <a class="text-link" href="./flights.html#airport-bus">복정역과 사당역 공항버스</a></div>
-    </section>
-    <section class="shell page-section" id="packing" aria-labelledby="packing-title">
-      <div class="section-heading"><div><h2 id="packing-title">출발 전 준비</h2><p class="meta">체크한 항목은 이 브라우저에 저장됩니다.</p></div></div>
-      <ul class="checklist trip-checklist">
-        <li class="book-panel">
-          <label><input type="checkbox" value="arrival-declaration"><strong>베트남 온라인 입국신고</strong></label>
-          <p>12월 11일에 두 사람 모두 작성합니다. 여권과 출국편 VJ863 및 숙소 주소를 준비하고, 발급된 QR을 각자 휴대폰에 저장합니다.</p>
-          <div class="actions">
-            <a class="text-link" href="https://prearrival.immigration.gov.vn/">베트남 이민국 신고하기</a>
-            <a class="text-link" href="https://prearrival.immigration.gov.vn/assets/UM/PAI_User_Guide_KO.pdf">한국어 작성 안내</a>
-          </div>
-        </li>
-        <li class="book-panel">
-          <label><input type="checkbox" value="travel-insurance"><strong>카카오페이 해외여행보험</strong></label>
-          <p>출국 전에 함께 가입으로 두 사람을 등록합니다. 12월 13일 집에서 출발하는 시각부터 16일 귀가 예정 시각까지 설정하고, 해외 의료비 보장과 보험료를 확인한 뒤 가입증서를 저장합니다.</p>
-          <div class="actions"><a class="text-link" href="https://www.kakaopayinscorp.co.kr/products/FAA001">카카오페이손해보험 가입 안내</a></div>
-        </li>
-        <li class="book-panel">
-          <label><input type="checkbox" value="esim"><strong>베트남 데이터 eSIM</strong></label>
-          <p>두 휴대폰의 eSIM 지원 여부를 확인합니다. 지도와 그랩 위주라면 5일권에 하루 1GB부터 비교합니다. 상품의 설치 시점과 사용 기간이 시작되는 조건을 확인하고, 호치민에 도착하면 모바일 데이터 회선을 여행용 eSIM으로 선택합니다.</p>
-          <div class="actions">
-            <a class="text-link" href="https://shop.usimsa.com/sim/1A9D30E5-6A69-EE11-BBF0-28187860D6D3">베트남 eSIM 요금제 보기</a>
-            <a class="text-link" href="https://support.apple.com/ko-kr/118227">아이폰 설정</a>
-            <a class="text-link" href="https://www.samsungsvc.co.kr/solution/1071978">갤럭시 설정</a>
-          </div>
-        </li>
-      </ul>
-    </section>
   </main>
   <footer class="footer">
     <div class="shell footer-inner">
